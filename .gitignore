@@ -1,0 +1,7 @@
+/chunky
+/world
+
+/ChunkyLauncher.jar
+
+/*.sh
+!/*.default.sh
