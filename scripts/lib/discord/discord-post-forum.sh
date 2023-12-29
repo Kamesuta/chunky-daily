@@ -32,7 +32,7 @@ if [ -f "$SUMMARY_PATH" ]; then
   fi
 else
   # サマリーのデータが存在しない場合
-  echo "エラー: サマリーファイルが存在しません"
+  echo "エラー: サマリーファイルが存在しません: $SUMMARY_PATH"
   exit 3
 fi
 
