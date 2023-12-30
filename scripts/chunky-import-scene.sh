@@ -28,7 +28,7 @@ convert_json() {
 # importフォルダに入っているすべてのjsonファイルを変換する
 for file in $(find $IMPORT_DIR -name "*.json"); do
   # フォルダ名を取得
-  folder=$(basename $(dirname $file))
+  folder=$(basename $file .json)
   # scenesフォルダに入れるファイル名を決める
   new_file="$EXPORT_DIR/$folder/scene.json"
   # scenesフォルダに入れるフォルダを作成する
@@ -36,5 +36,5 @@ for file in $(find $IMPORT_DIR -name "*.json"); do
   # 変換関数を呼び出す
   convert_json $file $new_file $folder
   # importフォルダ内のjsonファイルを消す
-  rm -rf $(dirname $file)
+  rm -rf $file
 done
